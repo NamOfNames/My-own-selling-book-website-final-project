@@ -1,0 +1,69 @@
+{
+    "data": [
+        {
+            "name": "MATRIX 1999 DECK",
+            "price": "1.470.000đ",
+            "image": "../../../assets/images/ShoppingImages/matrix-1999-1.jpg"
+        },
+        {
+            "name": "RAEDA DECK",
+            "price": "1.470.000đ",
+            "image": "../../../assets/images/ShoppingImages/Raeda-Deck.jpg"
+        },
+        {
+            "name": "MUSTY DECK",
+            "price": "1.470.000đ",
+            "image": "../../../assets/images/ShoppingImages/Musty-Deck.jpg"
+        },
+        {
+            "name": "TRISTIQUE DECK",
+            "price": "1.470.000đ",
+            "image": "../../../assets/images/ShoppingImages/Tristique-deck.jpg"
+        },
+        {
+            "name": "FIELD TRIP DECK",
+            "price": "1.470.000đ",
+            "image": "../../../assets/images/ShoppingImages/Fied-Trip-deck.jpg"
+        },
+        {
+            "name": "TARO RAINBOW LOGO DECK",
+            "price": "1.670.000đ",
+            "image": "../../../assets/images/ShoppingImages/web-5.jpg"
+        },
+        {
+            "name": "NEON RAINBOW LOGO DECK",
+            "price": "1.670.000đ",
+            "image": "../../../assets/images/ShoppingImages/web-1.jpg"
+        },
+        {
+            "name": "ORANAGE RAINBOW LOGO DECK",
+            "price": "1.670.000đ",
+            "image": "../../../assets/images/ShoppingImages/web-2.jpg"
+        },
+        {
+            "name": "BLUE RAINBOW LOGO DECK",
+            "price": "1.670.000đ",
+            "image": "../../../assets/images/ShoppingImages/web-3.jpg"
+        },
+        {
+            "name": "WHITE RAINBOW LOGO DECK",
+            "price": "1.670.000đ",
+            "image": "../../../assets/images/ShoppingImages/web-4.jpg"
+        },
+        {
+            "name": "CUTIS MODEL DECK",
+            "price": "1.670.000đ",
+            "image": "../../../assets/images/ShoppingImages/cutis.jpg"
+        },
+        {
+            "name": "CAM VU MODEL DECK",
+            "price": "1.670.000đ",
+            "image": "../../../assets/images/ShoppingImages/cam-vu.jpg"
+        },
+        {
+            "name": "SON NGUYEN MODEL DECK",
+            "price": "1.670.000đ",
+            "image": "../../../assets/images/ShoppingImages/son-nguyen.jpg"
+        }
+    ]
+}

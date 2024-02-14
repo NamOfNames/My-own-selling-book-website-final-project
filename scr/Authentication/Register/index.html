@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css"
+    />
+  </head>
+  <body>
+    <form name="form_login" class="formLogin" id="formSignup">
+      <h1>Register/SignUp</h1>
+      <br />
+      <h3>
+        Already have an account>
+        <a href="../Login/index.html">Login to your account</a>
+      </h3>
+      <br />
+      <input
+        type="text"
+        name="fullName"
+        id="signup-name"
+        class="inputFullName"
+        placeholder="Enter Full Name"
+        required
+      />
+      <br />
+      <input
+        type="number"
+        name="age"
+        id="signup-age"
+        class="inputAge"
+        placeholder="Enter Age"
+        required
+      />
+      <br />
+      <input
+        type="email"
+        name="email"
+        id="signup-email"
+        class="inputEmail"
+        placeholder="Enter Email"
+        required
+      />
+      <br />
+      <input
+        type="password"
+        name="password"
+        id="signup-password"
+        class="inputPassword"
+        placeholder="Enter Password"
+        required
+      />
+      <br />
+      <button class="buttonLogin" type="submit">Register</button>
+      <br />
+      <h3><a href="../../Shop/html/index.html">Back to bookshop</a></h3>
+    </form>
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

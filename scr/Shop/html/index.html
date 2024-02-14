@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Title -->
+    <title>Online Shopping Page</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="top-menu">
+        <div>
+          <h1>Online Books</h1>
+        </div>
+        <div class="page">
+          <a href="#">Sản phẩm</a>
+          <a href="#">Sale</a>
+          <a href="#">Thư viện</a>
+          <a href="#">Giới thiệu</a>
+        </div>
+        <div class="icon">
+          <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+          <a href="" id="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+          <p><i class="fa-solid fa-heart"></i></p>
+          <div class="account" id="account">
+            <p>
+              <i class="fa-solid fa-user" id="users"></i>
+            </p>
+            <div class="dropdown-content">
+              <button type="button" class="User_Logout" id="User_Logout">Sign out</button>
+            </div>
+          </div>
+
+          <div class="lines"></div>
+          <br />
+          <h3>
+            <a href="../../Authentication/Login/index.html" id="User_Login"
+              >Login</a
+            >
+          </h3>
+          <!-- <i class="fa-solid fa-globe"></i> -->
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="selector">
+          <a href="#" id="highlight">Deck</a>
+          <br /><br /><br />
+          <div class="wrap_search">
+            <input type="text" placeholder="Search..." id="Search" />
+            <select
+              class="form-select-sm"
+              id="selection"
+              aria-label="Default select example"
+            >
+              <option selected>Book</option>
+              <option value="1" id="Done_Notes">Price</option>
+              <option value="2" id="Doing_Notes">Genre</option>
+            </select>
+          </div>
+        </div>
+        <div id="products"></div>
+      </div>
+    </div>
+    <script type="module" src="../javascript/main.js"></script>
+  </body>
+</html>

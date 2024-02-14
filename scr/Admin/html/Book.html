@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1"
+    />
+    <title>Modern Admin Dashboard</title>
+    <!-- Link css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Link font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <!-- Link bootstrap -->
+  </head>
+  <body>
+    <input type="checkbox" id="menu-toggle" />
+    <div class="sidebar">
+      <div class="side-header">
+        <h3>M<span>odern</span></h3>
+      </div>
+
+      <div class="side-content">
+        <div class="profile">
+          <div
+            class="profile-img bg-img"
+            style="background-image: url(/img/Chritmas\ henry\ stickmin.png)"
+          ></div>
+          <h4>NamOfNames</h4>
+          <small>Leader</small>
+        </div>
+
+        <div class="side-menu">
+          <ul>
+            <li>
+              <a href="./index.html" class="">
+                <span class="las la-home"></span>
+                <small>Dashboard</small>
+              </a>
+            </li>
+            <li>
+              <a href="./User.html">
+                <span class="las la-user-alt"></span>
+                <small>User</small>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="las la-envelope"></span>
+                <small>Mailbox</small>
+              </a>
+            </li>
+            <li>
+              <a href="./Book.html" class="active">
+                <span class="las la-book"></span>
+                <small>Books</small>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="las la-shopping-cart"></span>
+                <small>Orders</small>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="las la-tasks"></span>
+                <small>Tasks</small>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <header>
+        <div class="header-content">
+          <label for="menu-toggle">
+            <span class="las la-bars"></span>
+          </label>
+
+          <div class="header-menu">
+            <label for="">
+              <span class="las la-search"></span>
+            </label>
+
+            <div class="notify-icon">
+              <span class="las la-envelope"></span>
+            </div>
+
+            <div class="notify-icon">
+              <span class="las la-bell"></span>
+            </div>
+
+            <div class="user">
+              <div
+                class="bg-img"
+                style="
+                  background-image: url(/img/Chritmas\ henry\ stickmin.png);
+                "
+              ></div>
+
+              <span class="las la-power-off"></span>
+              <span>Logout</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="page-content">
+          <div class="records table-responsive">
+            <div class="record-header">
+              <div class="add">
+                <span>Entries</span>
+                <select name="" id="">
+                  <option value="">ID</option>
+                </select>
+                <button class="btn_AddBook">Add Book</button>
+              </div>
+
+              <div class="browse">
+                <input
+                  type="search"
+                  placeholder="Search"
+                  class="record-search"
+                  id="Search"
+                />
+                <select name="" id="">
+                  <option value="">Status</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <table class="table" width="100%">
+                <thead>
+                  <tr>
+                    <th>UID</th>
+                    <th><span class="las la-sort"></span> Title</th>
+                    <th><span class="las la-sort"></span> Genre</th>
+                    <th><span class="las la-sort"></span> Amount</th>
+                    <th><span class="las la-sort"></span> Price</th>
+                    <th><span class="las la-sort"></span> ACTIONS</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Name</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Change_BookName"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Author</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Change_Author"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Pages</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Change_Pages"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Genre</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Change_Genre"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Year</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Change_Year"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Amount</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Change_Amount"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <h3>Price</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Change_Price"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Rating</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Change_Rating"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Description</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Change_Description"
+          cols="50%"
+          rows="5%"
+        ></textarea>
+        <br /><br />
+        <button
+          type="button"
+          class="btn btn-primary btn_submit_EditBook"
+          id="btn_submit_EditBook"
+        >
+          Edit Book
+        </button>
+      </div>
+    </div>
+    <div id="AddBook_Modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>ID</h3>
+        <br />
+        <textarea class="Edit_User" id="Add_ID" cols="50%" rows="1%"></textarea>
+        <br />
+        <h3>Name</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Add_BookName"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Author</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Add_Author"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Pages</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Add_Pages"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Genre</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Add_Genre"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Year</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Add_Year"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Amount</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Add_Amount"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <h3>Price</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Add_Price"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Rating</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Add_Rating"
+          cols="50%"
+          rows="1%"
+        ></textarea>
+        <br />
+        <h3>Description</h3>
+        <br />
+        <textarea
+          class="Edit_User"
+          id="Add_Description"
+          cols="50%"
+          rows="5%"
+        ></textarea>
+        <br /><br />
+        <button
+          type="button"
+          class="btn btn-primary btn_submit_AddBook"
+          id="Add_Book"
+        >
+          Edit Book
+        </button>
+      </div>
+    </div>
+    <script type="module" src="../javascript/Book.js"></script>
+    <script type="module" src="../javascript/AddBooks.js"></script>
+  </body>
+</html>
