@@ -51,6 +51,24 @@ loginForm.addEventListener("submit", (e) => {
   });
 });
 
+function Account_login() {
+  const key = JSON.parse(localStorage.getItem("login"));
+  if (key) {
+    btn_UserLogin.style = "display: none";
+    UserIcon.style = "display: block";
+  } else {
+    btn_UserLogin.style = "display: block";
+    UserIcon.style = "display: none";
+  }
+}
+
+btn_UserLogout.addEventListener("click", () => {
+  localStorage.setItem("login", false);
+  auth.signOut().then(() => {
+    console.log("user signed out");
+  });
+  window.location.reload();
+});
 // btn_ClearLS.addEventListener("click", () => {
 //   localStorage.clear();
 // });
