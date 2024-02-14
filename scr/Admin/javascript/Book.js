@@ -4,7 +4,7 @@ import {
   get,
   child,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-import { deleteUser } from "./DeleteUser.js";
+import { deleteUserinDb } from "./DeleteUser.js";
 import { editUser } from "./EditUser.js";
 import { dbrt, refDb, app, analytics, firebaseConfig } from "./firebase.js";
 import {
