@@ -2,13 +2,12 @@ import {
   ref,
   remove,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-import { dbrt } from "./firebase.js";
+import { app, dbrt } from "../firebase.js";
 import {
   getAuth,
   onAuthStateChanged,
   deleteUser,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-import { app } from "./firebase.js";
 
 const auth = getAuth(app);
 

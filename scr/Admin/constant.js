@@ -36,12 +36,15 @@ const btn_AddUser = document.querySelector(".btn_AddUser");
 const btn_AddBook = document.querySelector(".btn_AddBook");
 
 const table = document.querySelector(".table");
+const Search = document.getElementById("Search");
+const UserOption = document.getElementById("Search_User_Option");
+const BookOption = document.getElementById("Search_Book_Option")
+
 var AddUser_modal = document.getElementById("AddUser_Modal");
 var AddBook_modal = document.getElementById("AddBook_Modal");
 var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 var span_1 = document.getElementsByClassName("close")[1];
-const Search = document.getElementById("Search");
 
 export {
   input_RewriteAge,
@@ -78,6 +81,8 @@ export {
   btn_AddUser,
   btn_AddBook,
   Search,
+  UserOption,
+  BookOption,
   AddUser_modal,
   AddBook_modal,
   modal,

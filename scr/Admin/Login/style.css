@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    font-family:'Courier New', Courier, monospace;
+    background-image: url("../../../assets/images/Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .buttonLogin {
+    color: var(--white);
+  }
+  
+  .formLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+  }
+  .formLogin input {
+    width: 25vw;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .formLogin button {
+    width: 20vw;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .formLogin * {
+    margin-bottom: 10px;
+  }
+  
+  a{
+    color: green;
+    text-decoration: none;
+  }

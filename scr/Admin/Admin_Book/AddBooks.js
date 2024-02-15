@@ -7,8 +7,7 @@ import {
   get,
   child,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-import { WriteUser } from "./WriteUser.js";
-import { firebaseConfig, app, analytics, dbrt, refDb } from "./firebase.js";
+import { firebaseConfig, app, analytics, dbrt, refDb } from "../firebase.js";
 import {
   input_AddAmount,
   input_AddAuthor,
@@ -21,7 +20,7 @@ import {
   input_AddGenre,
   input_AddPubYear,
   btn_SubmitAddBook,
-} from "./constant.js";
+} from "../constant.js";
 
 const form = document.querySelector(".form_info");
 const inputSearch = document.querySelector(".search_user");
