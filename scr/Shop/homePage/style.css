@@ -1,8 +1,22 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.wrap_logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  color: var(--color-black);
+  transition: ease 0.7s;
+}
+
+.wrap_logo div {
+  width: 100px;
+  height: 75px;
+  margin: 10px;
+}
+
+.wrap_logo:hover {
+  transform: scale(1.05);
+  color: var(--color-text_link);
 }
 
 #highlight {
@@ -16,14 +30,11 @@ a {
 }
 
 .top-menu {
-  background: #92e0d3;
-  color: white;
+  color: var(--color-black);
   display: grid;
+  padding: 12px;
   grid-template-columns: auto auto auto;
-  grid-column-gap: 9em;
-  grid-row-gap: 1em;
-  padding: 14px 64px;
-  margin-bottom: 36px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
 }
 
 .top-menu .page {
@@ -35,7 +46,17 @@ a {
 }
 
 .top-menu .page a {
-  color: white;
+  color: var(--color-black);
+  padding: 0 16px;
+  font-size: 17px;
+  text-decoration: none;
+  transition: ease 0.5s;
+}
+
+
+.top-menu .page a:hover {
+  text-decoration: underline;
+  transform: translate(0, -2px);
 }
 
 .top-menu .icon {
@@ -156,4 +177,18 @@ a {
 
 .account:hover .dropdown-content {
   display: block;
+}
+
+@keyframes underline-animation {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
 }

@@ -1,83 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Link css -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Title -->
-    <title>Online Shopping Page</title>
-  </head>
+  <!-- Link css -->
+  <link rel="stylesheet" href="../global_style.css">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="../../../assets/icons/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
 
-  <body>
-    <div class="container">
-      <div class="top-menu">
+  <!-- Title -->
+  <title>Online Shopping Page</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top-menu">
+      <div class="wrap_logo">
         <div>
-          <h1>Online Books</h1>
+          <img style="border-radius: 10px;" src="/assets/images/OIG4.PW16oc.jpg" alt="logo">
         </div>
-        <div class="page">
-          <a href="#">Sản phẩm</a>
-          <a href="#">Sale</a>
-          <a href="#">Thư viện</a>
-          <a href="#">Giới thiệu</a>
-        </div>
-        <div class="icon">
-          <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-          <a href="" id="cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </a>
-          <p><i class="fa-solid fa-heart"></i></p>
-          <div class="account" id="account">
-            <p>
-              <i class="fa-solid fa-user" id="users"></i>
-            </p>
-            <div class="dropdown-content">
-              <button type="button" class="User_Logout" id="User_Logout">Sign out</button>
-            </div>
-          </div>
-
-          <div class="lines"></div>
-          <br />
-          <h3>
-            <a href="../../Authentication/Login/index.html" id="User_Login"
-              >Login</a
-            >
-          </h3>
-          <!-- <i class="fa-solid fa-globe"></i> -->
-        </div>
+        <h1 style="width: 100%; font-family: Protest Riot, sans-serif; font-weight: 400; font-style: normal;">Online
+          Books</h1>
       </div>
-
-      <div class="main-content">
-        <div class="selector">
-          <a href="#" id="highlight">Deck</a>
-          <br /><br /><br />
-          <div class="wrap_search">
-            <input type="text" placeholder="Search..." id="Search" />
-            <select
-              class="form-select-sm"
-              id="selection"
-              aria-label="Default select example"
-            >
-              <option selected>Book</option>
-              <option value="1" id="Done_Notes">Price</option>
-              <option value="2" id="Doing_Notes">Genre</option>
-            </select>
+      <div class="page">
+        <a href="#">Sản phẩm</a>
+        <a href="#">Sale</a>
+        <a href="#">Thư viện</a>
+        <a href="#">Giới thiệu</a>
+      </div>
+      <div class="icon">
+        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+        <a href="" id="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        <p class="icon_heart"><i class="fa-solid fa-heart"></i></p>
+        <div class="account" id="account">
+          <p>
+            <i class="fa-solid fa-user" id="users"></i>
+          </p>
+          <div class="dropdown-content">
+            <button type="button" class="User_Logout" id="User_Logout">Sign out</button>
           </div>
         </div>
-        <div id="products"></div>
+
+        <div class="lines"></div>
+        <br />
+        <h3>
+          <a href="../../Authentication/Login/index.html" id="User_Login">Login</a>
+        </h3>
+        <!-- <i class="fa-solid fa-globe"></i> -->
       </div>
     </div>
-    <script type="module" src="../javascript/main.js"></script>
-  </body>
+
+    <div class="main-content">
+      <div class="selector">
+        <a href="#" id="highlight">Deck</a>
+        <br /><br /><br />
+        <div class="wrap_search">
+          <input type="text" placeholder="Search..." id="Search" />
+          <select class="form-select-sm" id="selection" aria-label="Default select example">
+            <option selected>Book</option>
+            <option value="1" id="Done_Notes">Price</option>
+            <option value="2" id="Doing_Notes">Genre</option>
+          </select>
+        </div>
+      </div>
+      <div id="products"></div>
+    </div>
+  </div>
+  <script type="module" src="../javascript/main.js"></script>
+</body>
+
 </html>
