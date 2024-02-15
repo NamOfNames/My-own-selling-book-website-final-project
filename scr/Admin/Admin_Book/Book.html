@@ -8,7 +8,7 @@
     />
     <title>Modern Admin Dashboard</title>
     <!-- Link css -->
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <!-- Link font awsome -->
     <link
       rel="stylesheet"
@@ -27,7 +27,9 @@
         <div class="profile">
           <div
             class="profile-img bg-img"
-            style="background-image: none"
+            style="
+              background-image: url(../../../assets/images/Admin/Chritmas\ henry\ stickmin.png);
+            "
           ></div>
           <h4>NamOfNames</h4>
           <small>Leader</small>
@@ -36,23 +38,23 @@
         <div class="side-menu">
           <ul>
             <li>
-              <a href="./index.html" class="">
+              <a href="../index.html" class="">
                 <span class="las la-home"></span>
                 <small>Dashboard</small>
               </a>
             </li>
             <li>
-              <a href="./User.html">
+              <a href="../Admin_User/User.html">
                 <span class="las la-user-alt"></span>
                 <small>User</small>
               </a>
             </li>
-            <li>
+            <!-- <li>
               <a href="">
                 <span class="las la-envelope"></span>
                 <small>Mailbox</small>
               </a>
-            </li>
+            </li> -->
             <li>
               <a href="./Book.html" class="active">
                 <span class="las la-book"></span>
@@ -60,17 +62,17 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="../Admin_Cart/Cart.html">
                 <span class="las la-shopping-cart"></span>
                 <small>Orders</small>
               </a>
             </li>
-            <li>
+            <!-- <li>
               <a href="">
                 <span class="las la-tasks"></span>
                 <small>Tasks</small>
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -100,12 +102,13 @@
               <div
                 class="bg-img"
                 style="
-                  background-image: none;
+                  background-image: url(../../../assets/images/Admin/Chritmas\ henry\ stickmin.png);
                 "
               ></div>
-
-              <span class="las la-power-off"></span>
-              <span>Logout</span>
+              <div class="Logout">
+                <span class="las la-power-off"></span>
+                <a href="../Login/index.html">Logout</a>
+              </div>
             </div>
           </div>
         </div>
@@ -130,8 +133,12 @@
                   class="record-search"
                   id="Search"
                 />
-                <select name="" id="">
-                  <option value="">Status</option>
+                <select name="Search_Book" id="Search_Book_Option">
+                  <option value="Name" selected>Name</option>
+                  <option value="Author">Author</option>
+                  <option value="Genre">Genre</option>
+                  <option value="Amount">Amount</option>
+                  <option value="Price">Price</option>
                 </select>
               </div>
             </div>
@@ -342,7 +349,7 @@
         </button>
       </div>
     </div>
-    <script type="module" src="../javascript/Book.js"></script>
-    <script type="module" src="../javascript/AddBooks.js"></script>
+    <script type="module" src="./Book.js"></script>
+    <script type="module" src="./AddBooks.js"></script>
   </body>
 </html>

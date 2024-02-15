@@ -2,12 +2,12 @@ import {
   set,
   ref,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-import { dbrt } from "./firebase.js";
+import { dbrt } from "../firebase.js";
 import {
   input_RewriteAge,
   input_RewriteName,
   input_RewriteEmail,
-} from "./constant.js";
+} from "../constant.js";
 
 export function editUser() {
   const id = localStorage.getItem("UID");

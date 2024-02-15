@@ -1,31 +1,62 @@
+// Import
+
 import {
   set,
   ref,
   get,
   child,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-import { deleteUserinDb } from "./DeleteUser.js";
-import { editUser } from "./EditUser.js";
+import { deleteUserinDb } from "./Admin_User/DeleteUser.js";
+import { editUser } from "./Admin_User/EditUser.js";
 import { dbrt, refDb, app, analytics, firebaseConfig } from "./firebase.js";
 import {
   input_RewriteAge,
   input_RewriteName,
   input_RewriteEmail,
-  btn_SubmitEditUser,
-  btn_AddUser,
-  AddUser_modal,
+  input_AddUserAge,
+  input_AddUserEmail,
+  input_AddUserName,
+  input_AddUserPassword,
+  input_RewriteAmount,
+  input_RewriteBookName,
+  input_RewriteDescription,
+  input_RewritePrice,
+  input_RewriteRating,
+  input_RewriteAuthor,
+  input_RewriteGenre,
+  input_RewritePages,
+  input_RewriteYear,
+  input_AddAmount,
+  input_AddAuthor,
+  input_AddBookName,
+  input_AddDescription,
+  input_AddID,
+  input_AddPages,
+  input_AddPrice,
+  input_AddRating,
+  input_AddGenre,
+  input_AddPubYear,
   table,
+  btn_SubmitEditUser,
+  btn_SubmitEditBook,
+  btn_SubmitAddUser,
+  btn_SubmitAddBook,
+  btn_AddUser,
+  btn_AddBook,
+  Search,
+  UserOption,
+  AddUser_modal,
+  AddBook_modal,
   modal,
   span,
   span_1,
-  Search,
 } from "./constant.js";
-// import { Search_User } from "./SearchUser.js";
+
+// Open modal, close modal
 
 span.onclick = function () {
   modal.style.display = "none";
 };
-
 span_1.onclick = function () {
   AddUser_modal.style.display = "none";
 };
@@ -37,9 +68,13 @@ window.onclick = function (event) {
   }
 };
 
+// Add User
+
 btn_AddUser.addEventListener("click", () => {
   AddUser_modal.style.display = "block";
 });
+
+// Get List User
 
 const getListUser = () => {
   get(child(refDb, "user/"))
@@ -61,7 +96,8 @@ const getListUser = () => {
           clientMain.classList.add("client");
           clientImage.classList.add("client-img");
           clientImage.classList.add("bg-img");
-          clientImage.style.backgroundImage = "none";
+          clientImage.style.backgroundImage =
+            "url(../../../assets/images/Background.jpg)";
           clientInfo.classList.add("client-info");
 
           const valueID = document.createElement("td");
@@ -121,19 +157,47 @@ const getListUser = () => {
     });
 };
 
-window.onload = () => {
-  getListUser();
-};
+// Edit User
 
 btn_SubmitEditUser.addEventListener("click", () => editUser());
 
+// Search User
+
 Search.onkeyup = function Search_User() {
-  for (let i = 3; i < table.childElementCount + 2; i++) {
-    var txtValue = table.childNodes[i].firstChild.childNodes[3].innerHTML;
-    if (txtValue.toUpperCase().indexOf(Search.value.toUpperCase()) > -1) {
-      table.childNodes[i].style.display = "";
-    } else {
-      table.childNodes[i].style.display = "none";
+  if (UserOption.value == "Email") {
+    for (let i = 3; i < table.childElementCount + 2; i++) {
+      var txtValue = table.childNodes[i].firstChild.childNodes[3].innerHTML;
+      if (txtValue.toUpperCase().indexOf(Search.value.toUpperCase()) > -1) {
+        table.childNodes[i].style.display = "";
+      } else {
+        table.childNodes[i].style.display = "none";
+      }
+    }
+  } else if (UserOption.value == "Name") {
+    for (let i = 3; i < table.childElementCount + 2; i++) {
+      var txtValue =
+        table.childNodes[i].firstChild.childNodes[1].firstChild.lastChild
+          .firstChild.nextSibling.innerHTML;
+      if (txtValue.toUpperCase().indexOf(Search.value.toUpperCase()) > -1) {
+        table.childNodes[i].style.display = "";
+      } else {
+        table.childNodes[i].style.display = "none";
+      }
+    }
+  } else {
+    for (let i = 3; i < table.childElementCount + 2; i++) {
+      var txtValue = table.childNodes[i].firstChild.childNodes[2].innerHTML;
+      if (txtValue.toUpperCase().indexOf(Search.value.toUpperCase()) > -1) {
+        table.childNodes[i].style.display = "";
+      } else {
+        table.childNodes[i].style.display = "none";
+      }
     }
   }
+};
+
+// Window onload
+
+window.onload = () => {
+  getListUser();
 };

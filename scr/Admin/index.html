@@ -8,7 +8,7 @@
     />
     <title>Modern Admin Dashboard</title>
     <!-- Link css -->
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <!-- Link font awsome -->
     <link
       rel="stylesheet"
@@ -24,7 +24,12 @@
 
       <div class="side-content">
         <div class="profile">
-          <div class="profile-img bg-img" style="background-image: none"></div>
+          <div
+            class="profile-img bg-img"
+            style="
+              background-image: url(../../assets/images/Admin/Chritmas\ henry\ stickmin.png);
+            "
+          ></div>
           <h4>NamOfNames</h4>
           <small>Leader</small>
         </div>
@@ -32,41 +37,41 @@
         <div class="side-menu">
           <ul>
             <li>
-              <a href="./index.html" class="">
+              <a href="./index.html" class="active">
                 <span class="las la-home"></span>
                 <small>Dashboard</small>
               </a>
             </li>
             <li>
-              <a href="./User.html" class="active">
+              <a href="./Admin_User/User.html">
                 <span class="las la-user-alt"></span>
                 <small>User</small>
               </a>
             </li>
-            <li>
+            <!-- <li>
               <a href="">
                 <span class="las la-envelope"></span>
                 <small>Mailbox</small>
               </a>
-            </li>
+            </li> -->
             <li>
-              <a href="./Book.html">
+              <a href="./Admin_Book/Book.html">
                 <span class="las la-book"></span>
                 <small>Books</small>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="./Admin_Cart/Cart.html">
                 <span class="las la-shopping-cart"></span>
                 <small>Orders</small>
               </a>
             </li>
-            <li>
+            <!-- <li>
               <a href="">
                 <span class="las la-tasks"></span>
                 <small>Tasks</small>
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -86,6 +91,7 @@
 
             <div class="notify-icon">
               <span class="las la-envelope"></span>
+              <span></span>
             </div>
 
             <div class="notify-icon">
@@ -93,23 +99,88 @@
             </div>
 
             <div class="user">
-              <div class="bg-img" style="background-image: none"></div>
-
-              <span class="las la-power-off"></span>
-              <span>Logout</span>
+              <div
+                class="bg-img"
+                style="
+                  background-image: url(../../assets/images/Admin/Chritmas\ henry\ stickmin.png);
+                "
+              ></div>
+              <div class="Logout">
+                <span class="las la-power-off"></span>
+                <a href="./Login/index.html">Logout</a>
+              </div>
             </div>
           </div>
         </div>
       </header>
 
       <main>
+        <div class="page-header">
+          <h1>Dashboard</h1>
+          <small>Home / Dashboard</small>
+        </div>
+
         <div class="page-content">
+          <div class="analytics">
+            <div class="card">
+              <div class="card-head">
+                <h2>107,200</h2>
+                <span class="las la-user-friends"></span>
+              </div>
+              <div class="card-progress">
+                <small>User activity this month</small>
+                <div class="card-indicator">
+                  <div class="indicator one" style="width: 60%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h2>340,230</h2>
+                <span class="las la-eye"></span>
+              </div>
+              <div class="card-progress">
+                <small>Page views</small>
+                <div class="card-indicator">
+                  <div class="indicator two" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h2>$653,200</h2>
+                <span class="las la-shopping-cart"></span>
+              </div>
+              <div class="card-progress">
+                <small>Books Revenue</small>
+                <div class="card-indicator">
+                  <div class="indicator three" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h2>0</h2>
+                <span class="las la-envelope"></span>
+              </div>
+              <div class="card-progress">
+                <small>New E-mails received</small>
+                <div class="card-indicator">
+                  <div class="indicator four" style="width: 0%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="records table-responsive">
             <div class="record-header">
               <div class="add">
                 <span>Entries</span>
                 <select name="" id="">
-                  <option value="">ID</option>
+                  <option value="">UID</option>
                 </select>
                 <button class="btn_AddUser" id="btn_AddUser">Add User</button>
               </div>
@@ -121,8 +192,10 @@
                   class="record-search"
                   id="Search"
                 />
-                <select name="" id="">
-                  <option value="">Status</option>
+                <select name="Search_User" id="Search_User_Option">
+                  <option value="Email" selected>Email</option>
+                  <option value="Name">Name</option>
+                  <option value="Age">Age</option>
                 </select>
               </div>
             </div>
@@ -153,7 +226,7 @@
           class="Edit_User"
           id="Change_UserName"
           cols="table-responsive"
-          rows="1%"
+          rows="5%"
         ></textarea>
         <h3>Age</h3>
         <br />
@@ -161,7 +234,7 @@
           class="Edit_User"
           id="Change_UserAge"
           cols="auto"
-          rows="1%"
+          rows="5%"
         ></textarea>
         <br />
         <h3>Email</h3>
@@ -170,7 +243,7 @@
           class="Edit_User"
           id="Change_UserEmail"
           cols="auto"
-          rows="1%"
+          rows="5%"
         ></textarea>
         <button
           type="button"
@@ -210,14 +283,14 @@
           rows="1%"
         ></textarea>
         <h3>Password</h3>
-        <br />
+        <br /><br />
         <textarea
           class="Edit_User"
           id="Add_UserPassword"
           cols="auto"
           rows="1%"
         ></textarea>
-        <br /><br />
+        <br />
         <button
           type="button"
           class="btn btn-primary btn_submit_AddUser"
@@ -227,7 +300,7 @@
         </button>
       </div>
     </div>
-    <script type="module" src="../javascript/main.js"></script>
-    <script type="module" src="../javascript/AddUser.js"></script>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./Admin_User/AddUser.js"></script>
   </body>
 </html>

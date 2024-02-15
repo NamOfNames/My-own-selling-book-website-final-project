@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admind Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css"
+    />
+  </head>
+  <body>
+    <form name="form_login" class="formLogin" id="formLogin">
+      <h1>Admin Login</h1>
+      <br />
+      <br />
+      <input
+        type="email"
+        name="email"
+        id="signin-email"
+        class="inputEmail"
+        placeholder="Enter Email"
+        required
+      />
+      <br />
+      <input
+        type="password"
+        name="password"
+        id="signin-password"
+        class="inputPassword"
+        placeholder="Enter Password"
+        required
+      />
+      <br />
+      <button class="buttonLogin" type="submit">Login</button>
+      <!-- <button type="button" id="ClearLS">A</button> -->
+      <br />
+    </form>
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+
+    <script src="login.js" type="module"></script>
+  </body>
+</html>

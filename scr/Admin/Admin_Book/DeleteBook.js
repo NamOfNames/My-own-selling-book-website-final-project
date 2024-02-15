@@ -7,10 +7,10 @@ import { dbrt } from "./firebase.js";
 export function deleteBook(id) {
   remove(ref(dbrt, `Books/${id}`))
     .then(() => {
-      "Remove succeeded.");
+      ("Remove succeeded.");
       window.location.reload();
     })
     .catch((error) => {
-      "Remove failed: " + error.message);
+      "Remove failed: " + error.message;
     });
 }

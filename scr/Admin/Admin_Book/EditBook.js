@@ -2,7 +2,7 @@ import {
   set,
   ref,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-import { dbrt } from "./firebase.js";
+import { dbrt } from "../firebase.js";
 import {
   input_RewriteBookName,
   input_RewriteAmount,
@@ -13,7 +13,7 @@ import {
   input_RewriteGenre,
   input_RewritePages,
   input_RewriteYear,
-} from "./constant.js";
+} from "../constant.js";
 
 export function editBook() {
   const id = localStorage.getItem("UID");
