@@ -6,6 +6,10 @@ import {
   get,
   child,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+import {
+  getAnalytics,
+  logEvent,
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 import { deleteUserinDb } from "./Admin_User/DeleteUser.js";
 import { editUser } from "./Admin_User/EditUser.js";
 import { dbrt, refDb, app, analytics, firebaseConfig } from "./firebase.js";
@@ -201,3 +205,9 @@ Search.onkeyup = function Search_User() {
 window.onload = () => {
   getListUser();
 };
+
+// console.log(analytics);
+logEvent(analytics, 'screen_view', {
+  firebase_screen: "url(./index.html)", 
+  firebase_screen_class: screenClass
+});
