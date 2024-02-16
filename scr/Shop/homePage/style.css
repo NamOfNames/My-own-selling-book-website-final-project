@@ -9,8 +9,8 @@
 }
 
 .wrap_logo div {
-  width: 100px;
-  height: 75px;
+  width: 50px;
+  height: 40px;
   margin: 10px;
 }
 
@@ -24,6 +24,44 @@
   color: black;
 }
 
+#carouselExample {
+  padding-top: 25px;
+}
+
+#carouselExample button:hover {
+  background: transparent !important;
+}
+
+#carouselExample .carousel-inner {
+  height: 100%;
+  position: relative;
+}
+
+.wrap_content_banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  opacity: 0.1;
+}
+
+.content_text {
+  position: absolute;
+  top: 40%;
+  left: 42%;
+  color: var(--color-white);
+  text-align: center;
+}
+
+#carouselExample .carousel-inner .carousel-item, #carouselExample .carousel-inner img {
+  object-fit: cover;
+  background-color: red;
+  height: 100%;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -32,9 +70,13 @@ a {
 .top-menu {
   color: var(--color-black);
   display: grid;
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  background-color: white;
   padding: 12px;
   grid-template-columns: auto auto auto;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2)
 }
 
 .top-menu .page {
@@ -43,6 +85,7 @@ a {
   align-items: center;
   text-transform: uppercase;
   font-weight: 600;
+
 }
 
 .top-menu .page a {
@@ -63,6 +106,16 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+#button-dropdown {
+  background: none;
+  color: #000;
+  border: none;
+}
+
+#button-dropdown::after {
+  display: none;
 }
 
 .top-menu .icon a {
@@ -177,6 +230,15 @@ a {
 
 .account:hover .dropdown-content {
   display: block;
+}
+
+.icon_heart {
+  color: black;
+  transition: color 0.5s;
+}
+
+.icon_heart:hover {
+  color: red;
 }
 
 @keyframes underline-animation {

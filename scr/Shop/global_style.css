@@ -34,3 +34,13 @@ button:active {
     transform: scale(0.9);
     opacity: 0.8;
 }
+
+a {
+    text-decoration: none;
+    color: var(--color-text_link);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    color: var(--color-black);
+    margin: 0;
+}
