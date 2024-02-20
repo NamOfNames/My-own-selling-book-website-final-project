@@ -51,6 +51,7 @@ import {
   span_1,
 } from "../constant.js";
 import { editBook } from "./EditBook.js";
+import { deleteBook } from "./DeleteBook.js";
 
 // Open, close modal
 

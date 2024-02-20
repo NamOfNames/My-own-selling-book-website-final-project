@@ -87,6 +87,7 @@ const getListUser = () => {
         const data = snapshot.val();
         const listUser = Object.values(data);
         listUser.forEach((item) => {
+
           const tBody = document.createElement("tbody");
           tBody.id = item.uid;
 
@@ -205,9 +206,3 @@ Search.onkeyup = function Search_User() {
 window.onload = () => {
   getListUser();
 };
-
-// console.log(analytics);
-logEvent(analytics, 'screen_view', {
-  firebase_screen: "url(./index.html)", 
-  firebase_screen_class: screenClass
-});

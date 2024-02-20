@@ -41,15 +41,17 @@ import {
 } from "../constant.js";
 
 import {
+  get,
   set,
   ref,
+  child,
+  remove,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import {
   getAuth,
   createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-import { dbrt } from "../firebase.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBdO7FMR3KJrGhcBSwY7o9cCWqPcSR4cVo",
@@ -62,7 +64,7 @@ const firebaseConfig = {
   appId: "1:723734130833:web:e0728ad318d69bdc67cf30",
   measurementId: "G-RY2KY2Z9L1",
 };
-import { app, auth } from "../firebase.js";
+import { app, auth, dbrt, refDb } from "../firebase.js";
 
 btn_SubmitAddUser.addEventListener("click", () => {
   writeUserData();
@@ -95,10 +97,42 @@ const writeUserData = () => {
       })
       .catch((error) => {
         if (error.code == "auth/email-already-in-use") {
-          alert("user đã tồn tại");
+          get(child(refDb, "unactive user/")).then((snapshot) => {
+            if (snapshot.exists()) {
+              const data = snapshot.val();
+              const listUnactiveUser = Object.values(data);
+              for (let i = 0; i < listUnactiveUser.length; i++) {
+                if (listUnactiveUser[i].email == input_AddUserEmail.value) {
+                  const ActiveUser = {
+                    age: input_AddUserAge.value,
+                    email: listUnactiveUser[i].email,
+                    name: input_AddUserName.value,
+                    password: input_AddUserPassword.value,
+                    uid: listUnactiveUser[i].uid,
+                  };
+                  try {
+                    set(
+                      ref(dbrt, `user/${listUnactiveUser[i].uid}`),
+                      ActiveUser
+                    );
+                    alert("Success");
+                    remove(ref(dbrt, `unactive user/${listUnactiveUser[i].uid}`))
+                      .then(() => {})
+                      .catch((error) => {
+                        "Remove failed: " + error.message;
+                      });
+                    window.location.reload();
+                  } catch (error) {
+                    alert(error);
+                  }
+                }
+              }
+            }
+          });
+          // alert("User đã tồn tại");
         }
       });
   } else {
-    alert("Need all input");
+    alert("Something is wrong");
   }
 };
