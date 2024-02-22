@@ -1,5 +1,5 @@
 // js global
-const Search = document.getElementById("Search_Prices");
+const Search = document.getElementById("Search");
 const Products = document.getElementById("products");
 const UserIcon = document.getElementById("users");
 const btn_UserLogin = document.getElementById("User_Login");

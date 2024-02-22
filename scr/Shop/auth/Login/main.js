@@ -20,8 +20,8 @@ import {
   get,
   child,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-import { refDb } from "../../Admin/javascript/firebase.js";
-import { btn_ClearLS } from "../../Shop/javascript/constants.js";
+import { refDb } from "../../firebase.js";
+import { btn_ClearLS } from "../../constant.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -41,7 +41,7 @@ loginForm.addEventListener("submit", (e) => {
           localStorage.setItem("login", true);
           localStorage.setItem("User", item.uid);
           UserExsist = true;
-          window.location.replace("../../Shop/html/index.html");
+          window.location.replace("../../homePage/index.html");
         }
       });
       if (!UserExsist) {
@@ -62,13 +62,13 @@ function Account_login() {
   }
 }
 
-btn_UserLogout.addEventListener("click", () => {
-  localStorage.setItem("login", false);
-  auth.signOut().then(() => {
-    console.log("user signed out");
-  });
-  window.location.reload();
-});
+// btn_UserLogout.addEventListener("click", () => {
+//   localStorage.setItem("login", false);
+//   auth.signOut().then(() => {
+//     console.log("user signed out");
+//   });
+//   window.location.reload();
+// });
 // btn_ClearLS.addEventListener("click", () => {
 //   localStorage.clear();
 // });
