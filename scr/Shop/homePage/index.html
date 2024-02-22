@@ -1,166 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link css -->
+    <link rel="stylesheet" href="../global_style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="../../../assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Title -->
+    <title>Online Shopping Page</title>
+  </head>
 
-  <!-- Link css -->
-  <link rel="stylesheet" href="../global_style.css">
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="shortcut icon" href="../../../assets/icons/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <!-- Title -->
-  <title>Online Shopping Page</title>
-</head>
-
-<body>
-  <div class="top-menu">
-    <div class="wrap_logo" onclick="window.location.reload()">
-      <div>
-        <img style="border-radius: 10px; " src="/assets/images/OIG4.PW16oc.jpg" alt="logo">
+  <body>
+    <div class="top-menu">
+      <div class="wrap_logo" onclick="window.location.reload()">
+        <div>
+          <img
+            style="border-radius: 10px"
+            src="/assets/images/OIG4.PW16oc.jpg"
+            alt="logo"
+          />
+        </div>
+        <h3
+          style="
+            margin: 0;
+            width: 100%;
+            font-family: Protest Riot, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          "
+        >
+          Online Books
+        </h3>
       </div>
-      <h3 style="margin: 0;width: 100%; font-family: Protest Riot, sans-serif; font-weight: 400; font-style: normal;">
-        Online
-        Books</h3>
+      <div class="page">
+        <a href="#">Sản phẩm</a>
+        <a href="#">Sale</a>
+        <a href="#">Thư viện</a>
+        <a href="#">Giới thiệu</a>
+      </div>
+      <div class="icon">
+        <a style="color: #000" href="" id="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        <p class="icon_heart" style="margin: 0">
+          <i class="fa-solid fa-heart"></i>
+        </p>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle p-1 m-0"
+            id="button-dropdown"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-user" id="users"></i>
+          </button>
+          <ul class="dropdown-menu" id="menu-dropdown">
+            <li>
+              <a class="dropdown-item" style="color: #000" href="#">Profile</a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                style="color: #000"
+                href="../auth/Register/index.html"
+                >Register</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                style="color: #000"
+                href="../auth/Login/index.html"
+                >Sign In</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="account" id="account">
+          <div class="dropdown-content">
+            <button type="button" class="User_Logout" id="User_Logout">
+              Sign out
+            </button>
+          </div>
+        </div>
+
+        <div class="lines"></div>
+        <br />
+        <h3>
+          <a href="../../Authentication/Login/index.html" id="User_Login"
+            >Login</a
+          >
+        </h3>
+        <!-- <i class="fa-solid fa-globe"></i> -->
+      </div>
     </div>
-    <div class="page">
-      <a href="#">Sản phẩm</a>
-      <a href="#">Sale</a>
-      <a href="#">Thư viện</a>
-      <a href="#">Giới thiệu</a>
+    <div id="carouselExample" class="carousel slide" style="height: 75vh">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/assets/images/Banner/banner_1.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="wrap_content_banner"></div>
+          <div class="content_text">
+            <h1>Online Books</h1>
+            <span>Find your favorite book</span>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/assets/images/Banner/banner_2.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="wrap_content_banner"></div>
+          <div class="content_text">
+            <h1>Online Books</h1>
+            <span>Find your favorite book</span>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/assets/images/Banner/banner_3.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="wrap_content_banner"></div>
+          <div class="content_text">
+            <h1>Online Books</h1>
+            <span>Find your favorite book</span>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="icon">
-      <a style="color: #000" href="" id="cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </a>
-      <p class="icon_heart" style="margin: 0;"><i class="fa-solid fa-heart"></i></p>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle p-1 m-0" id="button-dropdown" type="button"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="fa-solid fa-user" id="users"></i>
-        </button>
-        <ul class="dropdown-menu" id="menu-dropdown">
-          <li><a class="dropdown-item" style="color: #000" href="#">Profile</a> </li>
-          <li><a class="dropdown-item" style="color: #000" href="#">Register</a></li>
-          <li><a class="dropdown-item" style="color: #000" href="#">Sign In</a></li>
+    <div class="container">
+      <div class="wrap_content_abountus">
+        <div class="container_creative_version">
+          <h5>CREATETIVE VERSION</h5>
+          <h1>We Collect & Publish Books</h1>
+          <span>
+            Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit sed quia.
+          </span>
+          <button>Abount Us</button>
+        </div>
+        <div class="box_img_abountUs">
+          <img src="/assets/images/image-2.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <div class="wrap_logo_footer" onclick="window.location.reload()">
+          <div>
+            <img
+              style="border-radius: 10px"
+              src="/assets/images/OIG4.PW16oc.jpg"
+              alt="logo"
+            />
+          </div>
+          <h3
+            style="
+              margin: 0;
+              width: 100%;
+              font-family: Protest Riot, sans-serif;
+              font-weight: 400;
+              font-style: normal;
+            "
+          >
+            Online Books
+          </h3>
+        </div>
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Trang Chủ</a>
+          </li>
+          <li class="menu__item"><a class="menu__link" href="#">Sale</a></li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Sản phẩm</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Thư viện</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Giới thiệu</a>
+          </li>
         </ul>
       </div>
-      <div class="account" id="account">
-        <div class="dropdown-content">
-          <button type="button" class="User_Logout" id="User_Logout">Sign out</button>
-        </div>
-      </div>
-
-      <div class="lines"></div>
-      <br />
-      <h3>
-        <a href="../../Authentication/Login/index.html" id="User_Login">Login</a>
-      </h3>
-      <!-- <i class="fa-solid fa-globe"></i> -->
-    </div>
-  </div>
-  <div id="carouselExample" class="carousel slide" style="height: 75vh;">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/assets/images/Banner/banner_1.jpg" class="d-block w-100" alt="...">
-        <div class="wrap_content_banner">
-
-        </div>
-        <div class="content_text">
-          <h1>Online Books</h1>
-          <span>Find your favorite book</span>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="/assets/images/Banner/banner_2.jpg" class="d-block w-100" alt="...">
-        <div class="wrap_content_banner">
-
-        </div>
-        <div class="content_text">
-          <h1>Online Books</h1>
-          <span>Find your favorite book</span>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="/assets/images/Banner/banner_3.jpg" class="d-block w-100" alt="...">
-        <div class="wrap_content_banner">
-
-        </div>
-        <div class="content_text">
-          <h1>Online Books</h1>
-          <span>Find your favorite book</span>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <div class="container">
-    <div class="wrap_content_abountus">
-      <div class="container_creative_version">
-        <h5>CREATETIVE VERSION</h5>
-        <h1>
-          We Collect & Publish Books
-        </h1>
-        <span>
-          Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia.
-        </span>
-        <button>Abount Us</button>
-      </div>
-      <div class="box_img_abountUs">
-        <img src="/assets/images/image-2.jpg" alt="">
-      </div>
-    </div>
-  </div>
-  <footer class="footer">
-    <div class="waves">
-      <div class="wave" id="wave1"></div>
-      <div class="wave" id="wave2"></div>
-      <div class="wave" id="wave3"></div>
-      <div class="wave" id="wave4"></div>
-    </div>
-    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-      <div class="wrap_logo_footer" onclick="window.location.reload()">
-        <div>
-          <img style="border-radius: 10px; " src="/assets/images/OIG4.PW16oc.jpg" alt="logo">
-        </div>
-        <h3 style="margin: 0;width: 100%; font-family: Protest Riot, sans-serif; font-weight: 400; font-style: normal;">
-          Online
-          Books</h3>
-      </div>
-      <ul class="menu">
-        <li class="menu__item"><a class="menu__link" href="#">Trang Chủ</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Sale</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Sản phẩm</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Thư viện</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Giới thiệu</a></li>
-      </ul>
-    </div>
-    <p>&copy;2024 Mindx JSI 01 | All Rights Reserved</p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
-  <script type="module" src="../javascript/main.js"></script>
-</body>
-
+      <p>&copy;2024 Mindx JSI 01 | All Rights Reserved</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../javascript/main.js"></script>
+  </body>
 </html>

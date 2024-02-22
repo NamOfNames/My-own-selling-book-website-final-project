@@ -4,23 +4,19 @@ import {
   UserIcon,
   btn_UserLogin,
   btn_UserLogout,
-} from "../contrant.js";
+} from "../constant.js";
 
-// Search.onkeyup = function Search_Prices() {
-//   let data = [];
-//   for (let i = 0; i < Products.childElementCount; i++) {
-//     data.push(
-//       Products.childNodes[i].lastChild.childNodes[1].lastChild.nodeValue
-//     );
-//     var txtValue =
-//       Products.childNodes[i].lastChild.childNodes[1].lastChild.nodeValue;
-//     if (txtValue.toUpperCase().indexOf(Search.value.toUpperCase()) > -1) {
-//       Products.childNodes[i].style.display = "";
-//     } else {
-//       Products.childNodes[i].style.display = "none";
-//     }
-//   }
-// };
+Search.onkeyup = function Search_Products() {
+  const products = document.getElementById("products");
+  for (let i = 0; i < products.childElementCount; i++) {
+    var txtValue = products.childNodes[i].lastChild.firstChild.innerHTML;
+    if (txtValue.toUpperCase().indexOf(Search.value.toUpperCase()) > -1) {
+      products.childNodes[i].style.display = "";
+    } else {
+      products.childNodes[i].style.display = "none";
+    }
+  }
+};
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
@@ -87,6 +83,7 @@ const getListBook = () => {
         let btn = document.createElement("button");
         btn.setAttribute("onclick", "addToCart()");
         btn.innerHTML = "Thêm vào giỏ hàng";
+        btn.classList.add("btn_AddtoCart");
         container.appendChild(btn);
 
         card.appendChild(container);
@@ -94,9 +91,8 @@ const getListBook = () => {
 
         let link = document.getElementById(item.id);
         link.addEventListener("click", () => {
-            let id = JSON.stringify(item.id);
-            localStorage.setItem("id_book", id);
-            link.href = "../homePage/index.html";
+          localStorage.setItem("id_book", item.id);
+          window.location.replace("../bookInfo/index.html");
         });
       });
     }

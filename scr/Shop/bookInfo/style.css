@@ -133,7 +133,7 @@ a {
   height: 36px;
 }
 
-/* .main-content .selector {
+.main-content .selector {
   padding: 16px 0px;
   text-align: center;
 }
@@ -143,25 +143,6 @@ a {
   font-weight: 500;
   color: #989898;
   padding: 12px 22px;
-} */
-
-.filter{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.filter h3{
-  padding: 10px;
-}
-
-.filter h3 select{
-  padding: 10px;
-}
-
-.filter h3 input{
-  margin-left: 10px;
-  padding: 5px;
 }
 
 #products {
@@ -273,26 +254,30 @@ a {
   text-align: start;
 }
 
-.wrap_content_abountus .container_creative_version {
+.wrap_content_abountus .container_bookinfo {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 2em 0;
+  padding: 5em 0;
   height: 300px;
 }
 
-.wrap_content_abountus .container_creative_version span {
+.wrap_content_abountus .container_bookinfo span {
   font-size: 13px;
   color: var(--color-gray-7);
 }
 
-.box_img_abountUs {
-  height: 50vh;
+.box_img_book {
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
-.wrap_content_abountus .container_creative_version button {
+.box_img_book img {
+  border-radius: 4%;
+  width: 80%;
+}
+
+.wrap_content_abountus .container_bookinfo button {
   width: 200px;
   padding: 20px;
   border-radius: 8px;
@@ -418,7 +403,7 @@ a {
   animation: animate 3s linear infinite;
 }
 
-.btn_AddtoCart{
+.btn_AddtoCart {
   color: black;
 }
 

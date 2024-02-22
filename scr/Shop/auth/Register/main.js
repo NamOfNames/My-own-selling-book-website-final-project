@@ -2,7 +2,7 @@ import {
   set,
   ref,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-import { dbrt } from "../../Admin/javascript/firebase.js";
+import { dbrt } from "../../firebase.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import {
   getAuth,
@@ -48,7 +48,7 @@ signupForm.addEventListener("submit", (e) => {
       }
       localStorage.setItem("login", true);
       localStorage.setItem("User", user.uid);
-      window.location.replace("../../Shop/html/index.html");
+      window.location.replace("../../homePage/index.html");
     })
     .catch((error) => {
       if (error.code == "auth/email-already-in-use") {
@@ -68,10 +68,10 @@ function Account_login() {
   }
 }
 
-btn_UserLogout.addEventListener("click", () => {
-  localStorage.setItem("login", false);
-  auth.signOut().then(() => {
-    console.log("user signed out");
-  });
-  window.location.reload();
-});
+// btn_UserLogout.addEventListener("click", () => {
+//   localStorage.setItem("login", false);
+//   auth.signOut().then(() => {
+//     console.log("user signed out");
+//   });
+//   window.location.reload();
+// });
