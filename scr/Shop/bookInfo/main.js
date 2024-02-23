@@ -21,7 +21,9 @@ export const firebaseConfig = {
   appId: "1:723734130833:web:e0728ad318d69bdc67cf30",
   measurementId: "G-RY2KY2Z9L1",
 };
-import { app, analytics, dbrt, refDb } from "../main.js";
+import { app, analytics, dbrt, refDb } from "../firebase.js";
+import { UserLogin, UserLogout } from "../main.js";
+import { btn_UserLogout } from "../constant.js";
 
 const getBookInfo = () => {
   const book_id = localStorage.getItem("id_book");
@@ -50,4 +52,8 @@ const getBookInfo = () => {
   });
 };
 
+window.onload = UserLogin();
+btn_UserLogout.addEventListener("click", () => {
+  UserLogout();
+});
 window.onload = getBookInfo();

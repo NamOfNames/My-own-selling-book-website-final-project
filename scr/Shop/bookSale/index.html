@@ -60,19 +60,19 @@
         </h3>
       </div>
       <div class="page">
-        <a href="#">Sản phẩm</a>
+        <a href="../homePage/index.html">Sản phẩm</a>
         <a href="#">Sale</a>
-        <a href="#">Thư viện</a>
+        <a href="../bookSale/index.html">Store</a>
         <a href="#">Giới thiệu</a>
       </div>
       <div class="icon">
-        <a style="color: #000" href="" id="cart">
+        <a style="color: #000" href="../bookCart/index.html" id="cart">
           <i class="fa-solid fa-cart-shopping"></i>
         </a>
         <p class="icon_heart" style="margin: 0">
           <i class="fa-solid fa-heart"></i>
         </p>
-        <div class="dropdown">
+        <div class="dropdown" id="account">
           <button
             class="btn btn-secondary dropdown-toggle p-1 m-0"
             id="button-dropdown"
@@ -84,31 +84,42 @@
           </button>
           <ul class="dropdown-menu" id="menu-dropdown">
             <li>
+              <a
+                class="dropdown-item"
+                style="color: #000"
+                href="../auth/Register/index.html"
+                >Register</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                style="color: #000"
+                href="../auth/Login/index.html"
+                >Sign In</a
+              >
+            </li>
+            <li>
               <a class="dropdown-item" style="color: #000" href="#">Profile</a>
             </li>
             <li>
-              <a class="dropdown-item" style="color: #000" href="#">Register</a>
-            </li>
-            <li>
-              <a class="dropdown-item" style="color: #000" href="#">Sign In</a>
+              <a
+                class="dropdown-item"
+                style="color: #000"
+                href="#"
+                id="btn_LogoutUser"
+                >Logout</a
+              >
             </li>
           </ul>
         </div>
-        <div class="account" id="account">
-          <div class="dropdown-content">
-            <button type="button" class="User_Logout" id="User_Logout">
-              Sign out
-            </button>
-          </div>
-        </div>
-
         <div class="lines"></div>
         <br />
-        <h3>
+        <!-- <h3>
           <a href="../../Authentication/Login/index.html" id="User_Login"
             >Login</a
           >
-        </h3>
+        </h3> -->
         <!-- <i class="fa-solid fa-globe"></i> -->
       </div>
     </div>
@@ -142,7 +153,6 @@
           <option value="Science Fiction" id="Genre_Science_Fiction">
             Science Fiction
           </option>
-          <option value="Dystopian" id="Genre_Dystopain">Dystopian</option>
         </select>
       </h3>
     </div>
@@ -188,10 +198,10 @@
           </li>
           <li class="menu__item"><a class="menu__link" href="#">Sale</a></li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Sản phẩm</a>
+            <a class="menu__link" href="../homePage/index.html">Sản phẩm</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Thư viện</a>
+            <a class="menu__link" href="../bookSale/index.html">Store</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">Giới thiệu</a>
