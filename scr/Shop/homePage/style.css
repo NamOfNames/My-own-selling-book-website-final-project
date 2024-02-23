@@ -228,10 +228,6 @@ a {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.account:hover .dropdown-content {
-  display: block;
-}
-
 .icon_heart {
   color: black;
   transition: color 0.5s;
