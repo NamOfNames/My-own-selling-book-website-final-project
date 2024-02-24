@@ -303,6 +303,10 @@ a {
   color: var(--color-text_link);
 }
 
+#btn_AddtoCart{
+  width: fit-content;
+}
+
 .footer {
   position: relative;
   width: 100%;
@@ -405,6 +409,11 @@ a {
 
 .btn_AddtoCart {
   color: black;
+}
+
+.amount{
+  display: flex;
+  align-items: center;
 }
 
 @keyframes animateWaves {

@@ -133,7 +133,7 @@
     height: 36px;
   }
   
-  /* .main-content .selector {
+  .main-content .selector {
     padding: 16px 0px;
     text-align: center;
   }
@@ -143,25 +143,6 @@
     font-weight: 500;
     color: #989898;
     padding: 12px 22px;
-  } */
-  
-  .filter{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .filter h3{
-    padding: 10px;
-  }
-  
-  .filter h3 select{
-    padding: 10px;
-  }
-  
-  .filter h3 input{
-    margin-left: 10px;
-    padding: 5px;
   }
   
   #products {
@@ -247,10 +228,6 @@
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
   
-  .account:hover .dropdown-content {
-    display: block;
-  }
-  
   .icon_heart {
     color: black;
     transition: color 0.5s;
@@ -295,7 +272,16 @@
   .wrap_content_abountus .container_creative_version button {
     width: 200px;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
+  }
+  
+  .wrap_content_ourshop {
+    background-color: #f3f3f3;
+  }
+  
+  .wrap_content_ourshop .container_creative_version {
+    padding: 20px;
+    text-align: center;
   }
   
   .wrap_logo_footer {
@@ -416,10 +402,6 @@
     opacity: 0.7;
     bottom: 20px;
     animation: animate 3s linear infinite;
-  }
-  
-  .btn_AddtoCart{
-    color: black;
   }
   
   @keyframes animateWaves {
