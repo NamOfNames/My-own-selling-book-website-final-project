@@ -60,16 +60,16 @@
         </h3>
       </div>
       <div class="page">
-        <a href="../homePage/index.html">Sản phẩm</a>
-        <a href="#">Sale</a>
-        <a href="../bookSale/index.html">Store</a>
-        <a href="#">Giới thiệu</a>
+        <a href="../homePage/index.html">Trang chủ</a>
+        <a href="../AboutUs/index.html">Về chúng tôi</a>
+        <a href="../bookSale/index.html">Sản phẩm</a>
+        <a href="../ContactUs/index.html">Liên hệ</a>
       </div>
       <div class="icon">
         <a style="color: #000" href="../bookCart/index.html" id="cart">
           <i class="fa-solid fa-cart-shopping"></i>
         </a>
-        <p class="icon_heart" style="margin: 0">
+        <p class="icon_heart" style="margin: 0" onclick="window.location.assign('../bookFavourite/index.html')">
           <i class="fa-solid fa-heart"></i>
         </p>
         <div class="dropdown" id="account">
@@ -180,16 +180,23 @@
       <div class="wrap_content_abountus">
         <div class="container_creative_version">
           <h5>CREATETIVE VERSION</h5>
-          <h1>We Collect & Publish Books</h1>
-          <span>
-            Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit sed quia.
-          </span>
-          <button>Abount Us</button>
+          <h1>Thu thập và bán sách</h1>
+          <span> Trang web bán sách </span>
+          <button>Về chúng tôi</button>
         </div>
         <div class="box_img_abountUs">
           <img src="/assets/images/image-2.jpg" alt="" />
         </div>
+      </div>
+      <div class="wrap_content_ourshop">
+        <div class="container_creative_version">
+          <h5>Cửa hàng</h5>
+          <h1>Một vài cuốn sách</h1>
+        </div>
+        <div id="products"></div>
+        <button onclick="window.location.assign('../bookSale/index.html')">
+          Xem thêm sách
+        </button>
       </div>
     </div>
     <footer class="footer">
@@ -229,14 +236,16 @@
         </div>
         <ul class="menu">
           <li class="menu__item">
-            <a class="menu__link" href="#">Trang Chủ</a>
-          </li>
-          <li class="menu__item"><a class="menu__link" href="#">Sale</a></li>
-          <li class="menu__item">
-            <a class="menu__link" href="../homePage/index.html">Sản phẩm</a>
+            <a class="menu__link" href="../homePage/index.html">Trang Chủ</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="../bookSale/index.html">Store</a>
+            <a class="menu__link" href="../AboutUs/index.html">Về chúng tôi</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="../bookSale/index.html">Sản phẩm</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="../ContactUs/index.html">Liên hệ</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">Giới thiệu</a>

@@ -60,16 +60,16 @@
         </h3>
       </div>
       <div class="page">
-        <a href="../homePage/index.html">Sản phẩm</a>
-        <a href="#">Sale</a>
-        <a href="../bookSale/index.html">Store</a>
-        <a href="#">Giới thiệu</a>
+        <a href="../homePage/index.html">Trang chủ</a>
+        <a href="../AboutUs/index.html">Về chúng tôi</a>
+        <a href="../bookSale/index.html">Sản phẩm</a>
+        <a href="../ContactUs/index.html">Liên hệ</a>
       </div>
       <div class="icon">
         <a style="color: #000" href="../bookCart/index.html" id="cart">
           <i class="fa-solid fa-cart-shopping"></i>
         </a>
-        <p class="icon_heart" style="margin: 0">
+        <p class="icon_heart" style="margin: 0" onclick="window.location.assign('../bookFavourite/index.html')">
           <i class="fa-solid fa-heart"></i>
         </p>
         <div class="dropdown" id="account">
@@ -185,18 +185,34 @@
       <div class="wrap_content_abountus">
         <div class="box_img_book"></div>
         <div class="container_bookinfo">
+          <p class="icon_heart" style="text-align: end;" id="btn_AddtoFavourites">
+            <i class="fa-solid fa-heart"></i>
+          </p>
+          <br />
           <h1 class="Book_Name"></h1>
           <br />
           <h5 class="Book_Author"></h5>
           <br />
           <h2 class="Book_Price"></h2>
           <br />
-          <p class="Book_Description">
-            Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit sed quia.
-          </p>
+          <p class="Book_Description"></p>
           <br />
-          <button>Abount Us</button>
+          <div class="amount">
+            <h4>Số lượng:</h4>
+            <br />
+            <input
+              style="padding: 10px; width: 20%"
+              min="1"
+              type="number"
+              value="1"
+              id="amount"
+            />
+          </div>
+
+          <br />
+          <button class="cart" id="btn_AddtoCart">
+            <i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng
+          </button>
         </div>
       </div>
     </div>
@@ -237,14 +253,16 @@
         </div>
         <ul class="menu">
           <li class="menu__item">
-            <a class="menu__link" href="#">Trang Chủ</a>
-          </li>
-          <li class="menu__item"><a class="menu__link" href="#">Sale</a></li>
-          <li class="menu__item">
-            <a class="menu__link" href="../homePage/index.html">Sản phẩm</a>
+            <a class="menu__link" href="../homePage/index.html">Trang Chủ</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="../bookSale/index.html">Store</a>
+            <a class="menu__link" href="../AboutUs/index.html">Về chúng tôi</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="../bookSale/index.html">Sản phẩm</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="../ContactUs/index.html">Liên hệ</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">Giới thiệu</a>

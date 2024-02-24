@@ -22,18 +22,14 @@ import {
   remove,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 import { UserLogin, UserLogout, GetBookInfo } from "../main.js";
-import { app, analytics, dbrt, refDb, auth } from "../firebase.js";
-export const firebaseConfig = {
-  apiKey: "AIzaSyBdO7FMR3KJrGhcBSwY7o9cCWqPcSR4cVo",
-  authDomain: "final-project-uvk-jsi01-hb.firebaseapp.com",
-  databaseURL:
-    "https://final-project-uvk-jsi01-hb-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "final-project-uvk-jsi01-hb",
-  storageBucket: "final-project-uvk-jsi01-hb.appspot.com",
-  messagingSenderId: "723734130833",
-  appId: "1:723734130833:web:e0728ad318d69bdc67cf30",
-  measurementId: "G-RY2KY2Z9L1",
-};
+import {
+  app,
+  analytics,
+  dbrt,
+  refDb,
+  auth,
+  firebaseConfig,
+} from "../firebase.js";
 
 const getListBook = () => {
   get(child(refDb, "Books/")).then((snapshot) => {
@@ -74,23 +70,23 @@ const getListBook = () => {
         price.innerHTML = "<b>Price:</b> " + item.price + " VND";
         container.appendChild(price);
 
-        let btn = document.createElement("button");
-        btn.innerHTML = "Thêm vào giỏ hàng";
-        btn.classList.add("btn_AddtoCart");
-        btn.addEventListener("click", () => {
-          const login = JSON.parse(localStorage.getItem("login"));
-          if (login) {
-            const UserUID = localStorage.getItem("User");
-            try {
-              set(ref(dbrt, `Cart/${UserUID}/${item.id}`), item);
-            } catch (error) {
-              alert(error);
-            }
-          } else {
-            window.location.assign("../auth/Login/index.html");
-          }
-        });
-        container.appendChild(btn);
+        // let btn = document.createElement("button");
+        // btn.innerHTML = "Thêm vào giỏ hàng";
+        // btn.classList.add("btn_AddtoCart");
+        // btn.addEventListener("click", () => {
+        // const login = JSON.parse(localStorage.getItem("login"));
+        //   if (login) {
+        //     const UserUID = localStorage.getItem("User");
+        //     try {
+        //       set(ref(dbrt, `Cart/${UserUID}/${item.id}`), item);
+        //     } catch (error) {
+        //       alert(error);
+        //     }
+        //   } else {
+        // window.location.assign("../auth/Login/index.html");
+        //   }
+        // });
+        // container.appendChild(btn);
 
         card.appendChild(container);
         document.getElementById("products").appendChild(card);

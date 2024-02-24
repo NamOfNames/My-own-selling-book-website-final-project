@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="../global_style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="../../../assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Title -->
+    <title>Online Shopping Page</title>
+  </head>
+
+  <body>
+    <div class="top-menu">
+      <div class="wrap_logo" onclick="window.location.reload()">
+        <div>
+          <img
+            style="border-radius: 10px"
+            src="/assets/images/OIG4.PW16oc.jpg"
+            alt="logo"
+          />
+        </div>
+        <h3
+          style="
+            margin: 0;
+            width: 100%;
+            font-family: Protest Riot, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          "
+        >
+          Online Books
+        </h3>
+      </div>
+      <div class="page">
+        <a href="../homePage/index.html">Trang chủ</a>
+        <a href="../AboutUs/index.html">Về chúng tôi</a>
+        <a href="../bookSale/index.html">Sản phẩm</a>
+        <a href="../ContactUs/index.html">Liên hệ</a>
+      </div>
+      <div class="icon">
+        <a style="color: #000" href="../bookCart/index.html" id="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        <p class="icon_heart" style="margin: 0" onclick="window.location.assign('../bookFavourite/index.html')">
+          <i class="fa-solid fa-heart"></i>
+        </p>
+        <div class="dropdown" id="account">
+          <button
+            class="btn btn-secondary dropdown-toggle p-1 m-0"
+            id="button-dropdown"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-user" id="users"></i>
+          </button>
+          <ul class="dropdown-menu" id="menu-dropdown">
+            <li>
+              <a
+                class="dropdown-item"
+                style="color: #000"
+                href="../auth/Register/index.html"
+                >Register</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                style="color: #000"
+                href="../auth/Login/index.html"
+                >Sign In</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" style="color: #000" href="#">Profile</a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                style="color: #000"
+                href="#"
+                id="btn_LogoutUser"
+                >Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="lines"></div>
+        <br />
+        <!-- <i class="fa-solid fa-globe"></i> -->
+      </div>
+    </div>
+    <div id="carouselExample" class="carousel slide" style="height: 75vh">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/assets/images/Banner/banner_1.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="wrap_content_banner"></div>
+          <div class="content_text">
+            <h1>Online Books</h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/assets/images/Banner/banner_2.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="wrap_content_banner"></div>
+          <div class="content_text">
+            <h1>Online Books</h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/assets/images/Banner/banner_3.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="wrap_content_banner"></div>
+          <div class="content_text">
+            <h1>Online Books</h1>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="container">
+      <div class="wrap_content_abountus">
+        <div class="CartInfo">
+          <h3>Giỏ hàng của bạn:</h3>
+          <br />
+          <table class="table" width="100%" id="table_CartInfo">
+            <thead>
+              <tr>
+                <th><span class="las la-sort"></span> Hình ảnh</th>
+                <th><span class="las la-sort"></span> Tên sách</th>
+                <th><span class="las la-sort"></span> Số lượng</th>
+                <th><span class="las la-sort"></span> Thành tiền</th>
+                <th><span class="las la-sort"></span> Xóa</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="line"></div>
+          <div class="price">
+            <h6>Tổng tiền:</h6>
+            <h5 id="total_checkout_price"></h5>
+          </div>
+          <br />
+          <select
+            required=""
+            name="tinhthanh"
+            onchange="load_quanhuyen(this.value);"
+            class="sel-cart sel-tinhthanh"
+          >
+            <option value="">Tỉnh/thành phố</option>
+            <option value="1">Hồ Chí Minh</option>
+            <option value="2">Hà Nội</option>
+            <option value="3">Bình Dương</option>
+            <option value="4">Đà Nẵng</option>
+            <option value="5">Hải Phòng</option>
+            <option value="6">Long An</option>
+            <option value="7">Bà Rịa Vũng Tàu</option>
+            <option value="8">An Giang</option>
+            <option value="9">Bắc Giang</option>
+            <option value="10">Bắc Kạn</option>
+            <option value="11">Bạc Liêu</option>
+            <option value="12">Bắc Ninh</option>
+            <option value="13">Bến Tre</option>
+            <option value="14">Bình Định</option>
+            <option value="15">Bình Phước</option>
+            <option value="16">Bình Thuận</option>
+            <option value="17">Cà Mau</option>
+            <option value="18">Cần Thơ</option>
+            <option value="19">Cao Bằng</option>
+            <option value="20">Đắk Lắk</option>
+            <option value="22">Điện Biên</option>
+            <option value="23">Đồng Nai</option>
+            <option value="24">Đồng Tháp</option>
+            <option value="25">Gia Lai</option>
+            <option value="26">Hà Giang</option>
+            <option value="27">Hà Nam</option>
+            <option value="28">Hà Tĩnh</option>
+            <option value="29">Hải Dương</option>
+            <option value="30">Hậu Giang</option>
+            <option value="31">Hòa Bình</option>
+            <option value="32">Hưng Yên</option>
+            <option value="33">Khánh Hòa</option>
+            <option value="34">Kiên Giang</option>
+            <option value="35">Kon Tum</option>
+            <option value="36">Lai Châu</option>
+            <option value="37">Lâm Đồng</option>
+            <option value="38">Lạng Sơn</option>
+            <option value="39">Lào Cai</option>
+            <option value="40">Nam Định</option>
+            <option value="41">Nghệ An</option>
+            <option value="42">Ninh Bình</option>
+            <option value="43">Ninh Thuận</option>
+            <option value="44">Phú Thọ</option>
+            <option value="45">Phú Yên</option>
+            <option value="46">Quảng Bình</option>
+            <option value="47">Quảng Nam</option>
+            <option value="48">Quảng Ngãi</option>
+            <option value="49">Quảng Ninh</option>
+            <option value="50">Quảng Trị</option>
+            <option value="51">Sóc Trăng</option>
+            <option value="52">Sơn La</option>
+            <option value="53">Tây Ninh</option>
+            <option value="54">Thái Bình</option>
+            <option value="55">Thái Nguyên</option>
+            <option value="56">Thanh Hóa</option>
+            <option value="57">Thừa Thiên Huế</option>
+            <option value="58">Tiền Giang</option>
+            <option value="59">Trà Vinh</option>
+            <option value="60">Tuyên Quang</option>
+            <option value="61">Vĩnh Long</option>
+            <option value="62">Vĩnh Phúc</option>
+            <option value="63">Yên Bái</option>
+          </select>
+          <select
+            required=""
+            name="quanhuyen"
+            onchange="load_phuongxa(this.value);"
+            class="sel-cart sel-quanhuyen"
+          >
+            <option value="">Quận/huyện</option>
+            <option value="55">Bàu Bàng</option>
+            <option value="56">Bến Cát</option>
+            <option value="57">Dầu Tiếng</option>
+            <option value="58">Tân Uyên</option>
+            <option value="59">Dĩ An</option>
+            <option value="60">Phú Giáo</option>
+            <option value="61">Thủ Dầu Một</option>
+            <option value="62">Thuận An</option>
+          </select>
+          <select
+            required=""
+            name="phuongxa"
+            onchange="load_giaship(this.value);"
+            class="sel-cart sel-phuongxa"
+          >
+            <option value="">Phường/xã</option>
+            <option value="961">Bạch Đằng</option>
+            <option value="962">Bình Mỹ</option>
+            <option value="963">Đất Cuốc</option>
+            <option value="964">Hiếu Liêm</option>
+            <option value="965">Hội Nghĩa</option>
+            <option value="966">Khánh Bình</option>
+            <option value="967">Lạc An</option>
+            <option value="968">Phú Chánh</option>
+            <option value="969">Tân Bình</option>
+            <option value="970">Tân Định</option>
+            <option value="971">Tân Hiệp</option>
+            <option value="972">Tân Lập</option>
+            <option value="973">Tân Mỹ</option>
+            <option value="974">Tân Phước Khánh</option>
+            <option value="975">Tân Thành</option>
+            <option value="976">Tân Vĩnh Hiệp</option>
+            <option value="977">Thái Hòa</option>
+            <option value="978">Thạnh Hội</option>
+            <option value="979">Thường Tân</option>
+            <option value="980">Thạnh Phước</option>
+            <option value="981">Uyên Hưng</option>
+            <option value="982">Vĩnh Tân</option>
+          </select>
+          <br><br>
+          <div class="address">
+            <textarea
+              name=""
+              id="address"
+              cols="30"
+              rows="3"
+              placeholder="Vui lòng nhập địa chỉ"
+            ></textarea>
+            <textarea
+              name=""
+              id="extra_info"
+              cols="30"
+              rows="3"
+              placeholder="Yêu cầu khác, không bắt buộc"
+            ></textarea>
+          </div>
+          <br />
+          <button class="btn_BuyBooks" type="submit">Thanh toán</button>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <div class="wrap_logo_footer" onclick="window.location.reload()">
+          <div>
+            <img
+              style="border-radius: 10px"
+              src="/assets/images/OIG4.PW16oc.jpg"
+              alt="logo"
+            />
+          </div>
+          <h3
+            style="
+              margin: 0;
+              width: 100%;
+              font-family: Protest Riot, sans-serif;
+              font-weight: 400;
+              font-style: normal;
+            "
+          >
+            Online Books
+          </h3>
+        </div>
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link" href="../homePage/index.html">Trang Chủ</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="../AboutUs/index.html">Về chúng tôi</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="../bookSale/index.html">Sản phẩm</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="../ContactUs/index.html">Liên hệ</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Giới thiệu</a>
+          </li>
+        </ul>
+      </div>
+      <p>&copy;2024 Mindx JSI 01 | All Rights Reserved</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

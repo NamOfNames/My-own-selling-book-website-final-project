@@ -9,27 +9,38 @@ import {
   update,
   remove,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-
-export const firebaseConfig = {
-  apiKey: "AIzaSyBdO7FMR3KJrGhcBSwY7o9cCWqPcSR4cVo",
-  authDomain: "final-project-uvk-jsi01-hb.firebaseapp.com",
-  databaseURL:
-    "https://final-project-uvk-jsi01-hb-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "final-project-uvk-jsi01-hb",
-  storageBucket: "final-project-uvk-jsi01-hb.appspot.com",
-  messagingSenderId: "723734130833",
-  appId: "1:723734130833:web:e0728ad318d69bdc67cf30",
-  measurementId: "G-RY2KY2Z9L1",
-};
-import { app, analytics, dbrt, refDb } from "../firebase.js";
+import { app, analytics, dbrt, refDb, firebaseConfig } from "../firebase.js";
 import { UserLogin, UserLogout } from "../main.js";
-import { btn_UserLogout } from "../constant.js";
+import {
+  Search,
+  Products,
+  UserIcon,
+  Account,
+  Selection,
+  Amount,
+  TableCartInfo,
+  User,
+  btn_AddtoFavourites,
+  btn_UserLogin,
+  btn_UserLogout,
+  btn_AddtoCart,
+  TotalCheckoutPrice,
+  btn_ClearLS,
+} from "../constant.js";
 
 const getBookInfo = () => {
   const book_id = localStorage.getItem("id_book");
   get(child(refDb, `Books/${book_id}`)).then((snapshot) => {
     if (snapshot.exists()) {
       const data = snapshot.val();
+      get(child(refDb, `Favourites/${User}/${data.id}`)).then((snapshot) => {
+        if (snapshot.exists()) {
+          btn_AddtoFavourites.style.color = "red";
+        } else {
+          btn_AddtoFavourites.style.color = "black";
+        }
+      });
+
       const BookBoxImage = document.querySelector(".box_img_book");
       const BookName = document.querySelector(".Book_Name");
       const BookAuthor = document.querySelector(".Book_Author");
@@ -45,9 +56,42 @@ const getBookInfo = () => {
       BookAuthor.innerHTML = "Author: " + data.author;
       BookPrice.innerHTML = data.price + " VNĐ";
       BookDescription.innerHTML = data.description;
-
       BookBoxImage.appendChild(Image);
-    } else {
+
+      btn_AddtoCart.addEventListener("click", () => {
+        const login = JSON.parse(localStorage.getItem("login"));
+        if (login) {
+          const UserUID = localStorage.getItem("User");
+          try {
+            const CartInfo = {
+              id: data.id,
+              price: data.price,
+              amount: Amount.value,
+              name: data.name,
+            };
+            set(ref(dbrt, `Cart/${UserUID}/${data.id}`), CartInfo);
+            alert("Đã thêm vào giỏ hàng");
+          } catch (error) {
+            alert(error);
+          }
+        } else {
+          window.location.assign("../auth/Login/index.html");
+        }
+      });
+      btn_AddtoFavourites.addEventListener("click", () => {
+        get(child(refDb, `Favourites/${User}/${data.id}`)).then((snapshot) => {
+          if (snapshot.exists()) {
+            remove(ref(dbrt, `Favourites/${User}/${data.id}`));
+            btn_AddtoFavourites.style.color = "black";
+          } else {
+            const FavouritesBookInfo = {
+              id: data.id,
+            };
+            set(ref(dbrt, `Favourites/${User}/${data.id}`), FavouritesBookInfo);
+            btn_AddtoFavourites.style.color = "red";
+          }
+        });
+      });
     }
   });
 };
