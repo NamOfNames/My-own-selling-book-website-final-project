@@ -6,9 +6,10 @@ const Account = document.getElementById("menu-dropdown");
 const Selection = document.getElementById("selection");
 const Amount = document.getElementById("amount");
 const TableCartInfo = document.getElementById("table_CartInfo");
-const User = localStorage.getItem("User")
+const User = localStorage.getItem("User");
+const Login = JSON.parse(localStorage.getItem("login"));
 
-const btn_AddtoFavourites = document.getElementById("btn_AddtoFavourites")
+const btn_AddtoFavourites = document.getElementById("btn_AddtoFavourites");
 const btn_UserLogin = document.getElementById("User_Login");
 const btn_UserLogout = document.getElementById("btn_LogoutUser");
 const btn_AddtoCart = document.getElementById("btn_AddtoCart");
@@ -24,6 +25,7 @@ export {
   Amount,
   TableCartInfo,
   User,
+  Login,
   btn_AddtoFavourites,
   btn_UserLogin,
   btn_UserLogout,

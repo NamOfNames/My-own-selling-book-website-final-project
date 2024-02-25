@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link css -->
-    <link rel="stylesheet" href="../../../global-style.css" />
+    <link rel="stylesheet" href="../global_style.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../Home/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -76,7 +75,7 @@
             font-style: normal;
           "
         >
-          Online Books
+          Peroti
         </h3>
       </div>
       <div class="page">
@@ -86,13 +85,17 @@
         <a href="../ContactUs/index.html">Liên hệ</a>
       </div>
       <div class="icon">
-        <a style="color: #000" href="" id="cart">
+        <a style="color: #000" href="../bookCart/index.html" id="cart">
           <i class="fa-solid fa-cart-shopping"></i>
         </a>
-        <p class="icon_heart" style="margin: 0">
+        <p
+          class="icon_heart"
+          style="margin: 0"
+          onclick="window.location.assign('../bookFavourite/index.html')"
+        >
           <i class="fa-solid fa-heart"></i>
         </p>
-        <div class="dropdown">
+        <div class="dropdown" id="account">
           <button
             class="btn btn-secondary dropdown-toggle p-1 m-0"
             id="button-dropdown"
@@ -104,26 +107,38 @@
           </button>
           <ul class="dropdown-menu" id="menu-dropdown">
             <li>
+              <a
+                class="dropdown-item"
+                style="color: #000"
+                href="../auth/Register/index.html"
+                >Register</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                style="color: #000"
+                href="../auth/Login/index.html"
+                >Sign In</a
+              >
+            </li>
+            <li>
               <a class="dropdown-item" style="color: #000" href="#">Profile</a>
             </li>
             <li>
-              <a class="dropdown-item" style="color: #000" href="#">Register</a>
-            </li>
-            <li>
-              <a class="dropdown-item" style="color: #000" href="#">Sign In</a>
+              <a
+                class="dropdown-item"
+                style="color: #000"
+                href="#"
+                id="btn_LogoutUser"
+                >Logout</a
+              >
             </li>
           </ul>
         </div>
-        <div class="account" id="account">
-          <div class="dropdown-content">
-            <button type="button" class="User_Logout" id="User_Logout">
-              Sign out
-            </button>
-          </div>
-        </div>
-
         <div class="lines"></div>
         <br />
+        <!-- <i class="fa-solid fa-globe"></i> -->
       </div>
     </div>
     <div>
@@ -237,7 +252,6 @@
             ><i class="fa-solid fa-link"></i
           ></a>
         </div>
-
       </div>
     </div>
     <footer class="footer">
@@ -272,7 +286,7 @@
               font-style: normal;
             "
           >
-            Online Books
+            Peroti
           </h3>
         </div>
         <ul class="menu">
