@@ -1,8 +1,13 @@
 import {
+  getDatabase,
   set,
   ref,
+  get,
+  child,
+  update,
+  remove,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-import { dbrt } from "../../firebase.js";
+import { dbrt, app, analytics, refDb, auth } from "../../firebase.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import {
   getAuth,
@@ -20,9 +25,7 @@ const firebaseConfig = {
   appId: "1:723734130833:web:e0728ad318d69bdc67cf30",
   measurementId: "G-RY2KY2Z9L1",
 };
-const app = initializeApp(firebaseConfig);
 const signupForm = document.querySelector("#formSignup");
-const auth = getAuth(app);
 
 signupForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -52,7 +55,35 @@ signupForm.addEventListener("submit", (e) => {
     })
     .catch((error) => {
       if (error.code == "auth/email-already-in-use") {
-        alert("user đã tồn tại");
+        get(child(refDb, "unactive user/")).then((snapshot) => {
+          if (snapshot.exists()) {
+            const data = snapshot.val();
+            const listUnactiveUser = Object.values(data);
+            for (let i = 0; i < listUnactiveUser.length; i++) {
+              if (listUnactiveUser[i].email == email) {
+                const ActiveUser = {
+                  age: age,
+                  email: email,
+                  name: name,
+                  password: password,
+                  uid: listUnactiveUser[i].uid,
+                };
+                try {
+                  set(ref(dbrt, `user/${listUnactiveUser[i].uid}`), ActiveUser);
+                  alert("Success");
+                  remove(ref(dbrt, `unactive user/${listUnactiveUser[i].uid}`))
+                    .then(() => {})
+                    .catch((error) => {
+                      "Remove failed: " + error.message;
+                    });
+                  window.location.replace("../../homePage/index.html");
+                } catch (error) {
+                  alert(error);
+                }
+              }
+            }
+          }
+        });
       }
     });
 });
